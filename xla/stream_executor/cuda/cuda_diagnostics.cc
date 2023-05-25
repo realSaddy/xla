@@ -282,7 +282,7 @@ tsl::StatusOr<DriverVersion> Diagnostician::FindDsoVersion() {
 
 tsl::StatusOr<DriverVersion> Diagnostician::FindKernelModuleVersion(
     const std::string &driver_version_file_contents) {
-  static const char *kDriverFilePrelude = "Kernel Module  ";
+  static const char *kDriverFilePrelude = "Kernel Module for aarch64  ";
   size_t offset = driver_version_file_contents.find(kDriverFilePrelude);
   if (offset == std::string::npos) {
     return tsl::Status(
